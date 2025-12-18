@@ -19,14 +19,14 @@ app.use(cors({
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// DB connect
+
 Dbconnect();
 
-// routes
+
 app.use("/api/users", userrouter);
 app.use("/api/tasks", usertaskrouter);
 
-// server listen
+
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
