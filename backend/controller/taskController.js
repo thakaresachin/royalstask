@@ -1,14 +1,9 @@
 import Task from "../model/Task.js";
 
-/*
-  HARD-CODED ADMIN
-*/
 const ADMIN_ID = "admin123";
 const ADMIN_PASSWORD = "admin@123";
 
-/*
-  ADMIN → CREATE / ASSIGN TASK
-*/
+
 export const createTask = async (req, res) => {
   try {
     const {
@@ -41,9 +36,7 @@ export const createTask = async (req, res) => {
   }
 };
 
-/*
-  USER → VIEW ASSIGNED TASKS
-*/
+
 import mongoose from "mongoose";
 
 export const getUserTasks = async (req, res) => {
@@ -60,7 +53,7 @@ export const getUserTasks = async (req, res) => {
 
     res.status(200).json({
       success: true,
-      tasks: tasks,   // ✅ IMPORTANT
+      tasks: tasks,  
     });
   } catch (error) {
     res.status(500).json({ error: error.message });
@@ -68,9 +61,7 @@ export const getUserTasks = async (req, res) => {
 };
 
 
-/*
-  USER → UPDATE TASK STATUS
-*/
+
 export const updateTaskStatus = async (req, res) => {
   try {
     const { taskId } = req.params;

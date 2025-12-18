@@ -13,7 +13,6 @@ export const createUser = async (req, res) => {
   try {
     const { adminId, adminPassword, name, email, password } = req.body;
 
-    // admin verification (simple)
     if (adminId !== ADMIN_ID || adminPassword !== ADMIN_PASSWORD) {
       return res.status(401).json({ message: "Unauthorized Admin" });
     }
@@ -34,9 +33,7 @@ export const createUser = async (req, res) => {
   }
 };
 
-/*
-  SIMPLE LOGIN (ADMIN / USER)
-*/
+
 export const loginUser = async (req, res) => {
   try {
     const { email, password } = req.body;
