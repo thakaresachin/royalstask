@@ -66,6 +66,14 @@ const Login = () => {
           </button>
         </form>
 
+        {/* 🔹 ADMIN PAGE BUTTON */}
+        <button
+          onClick={() => navigate("/admin")}
+          style={styles.adminButton}
+        >
+          Go to Admin Page
+        </button>
+
         <p style={styles.footer}>
           © 2025 Task Manager App
         </p>
@@ -121,6 +129,17 @@ const styles = {
     background: "#667eea",
     color: "#fff",
     fontSize: "15px",
+    fontWeight: "600",
+    cursor: "pointer"
+  },
+  adminButton: {
+    marginTop: "15px",
+    padding: "10px",
+    borderRadius: "8px",
+    border: "1px solid #667eea",
+    background: "#fff",
+    color: "#667eea",
+    fontSize: "14px",
     fontWeight: "600",
     cursor: "pointer"
   },

@@ -8,13 +8,13 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        {/* Login */}
+        {/* ADMIN LOGIN FIRST */}
         <Route path="/" element={<Login />} />
 
-        {/* Admin Dashboard (NOT PROTECTED) */}
+        {/* ADMIN DASHBOARD */}
         <Route path="/admin" element={<AdminDashboard />} />
 
-        {/* User Dashboard (PROTECTED) */}
+        {/* USER DASHBOARD (PROTECTED) */}
         <Route
           path="/user"
           element={
@@ -23,6 +23,9 @@ function App() {
             </ProtectedRoute>
           }
         />
+
+        {/* OPTIONAL: USER LOGIN PAGE */}
+        {/* <Route path="/login" element={<Login />} /> */}
       </Routes>
     </BrowserRouter>
   );
