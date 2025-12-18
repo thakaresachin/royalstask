@@ -10,7 +10,7 @@ const app = express();
 
 dotenv.config();
 
-// ✅ CORS (Frontend connect)
+
 app.use(cors({
   origin: true,
   credentials: true
